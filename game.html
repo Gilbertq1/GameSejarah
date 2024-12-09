@@ -9,24 +9,40 @@
     <link rel="stylesheet" href="game.css" />
   </head>
   <body>
+    <!-- Audio -->
+    <audio id="background-music" loop>
+      <source src="BGM/BGM.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- BGM Controls -->
+    <div class="bgm-container">
+      <!-- Tombol Play/Pause -->
+      <button class="bgm-button play" id="bgmButton">
+        <i class="fas fa-play"></i> Play BGM
+      </button>
+
+      <!-- Volume Bar -->
+      <div class="volume-bar-container">
+        <i class="fas fa-volume-down volume-icon" id="volumeIcon"></i>
+        <input type="range" class="volume-bar" id="volumeBar" min="0" max="100" value="50">
+        <span class="volume-value" id="volumeValue">50%</span>
+      </div>
+    </div>
+
+    <!-- Game Content -->
     <div class="container">
       <div id="game" class="justify-center flex-column">
         <div id="hud">
           <div id="hud-item">
-            <p id="progressText" class="hud-prefix">
-              Question
-            </p>
+            <p id="progressText" class="hud-prefix">Question</p>
             <div id="progressBar">
               <div id="progressBarFull"></div>
             </div>
           </div>
           <div id="hud-item">
-            <p class="hud-prefix">
-              Score
-            </p>
-            <h1 class="hud-main-text" id="score">
-              0
-            </h1>
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" id="score">0</h1>
             <p class="timing" id="timer">15</p>
           </div>
         </div>
@@ -49,6 +65,9 @@
         </div>
       </div>
     </div>
+
+    <!-- Script -->
     <script src="game.js"></script>
+    <script src="bgm.js"></script>
   </body>
 </html>

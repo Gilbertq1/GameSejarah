@@ -9,6 +9,27 @@
 </head>
 
 <body>
+    
+    <audio id="background-music" loop>
+        <source src="BGM/BGM.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+  
+      <!-- BGM Controls -->
+      <div class="bgm-container">
+        <!-- Tombol Play/Pause -->
+        <button class="bgm-button play" id="bgmButton">
+          <i class="fas fa-play"></i> Play BGM
+        </button>
+  
+        <!-- Volume Bar -->
+        <div class="volume-bar-container">
+          <i class="fas fa-volume-down volume-icon" id="volumeIcon"></i>
+          <input type="range" class="volume-bar" id="volumeBar" min="0" max="100" value="50">
+          <span class="volume-value" id="volumeValue">50%</span>
+        </div>
+      </div>
+
     <div id="collage">
         <h2>Image Puzzle</h2>
         <hr />
@@ -77,6 +98,7 @@
                 window.location.href = 'index.html';  // Arahkan kembali ke index.html
             }
         </script>
+       <script src="bgm.js"></script>
     </div>
 </body>
 </html>
